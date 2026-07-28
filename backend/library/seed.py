@@ -52,6 +52,8 @@ ARTIST_DATA = [
     {"name": "Jack Johnson", "bio": "American singer-songwriter and former professional surfer known for soft rock and acoustic pop."},
     {"name": "Yiruma", "bio": "South Korean pianist and composer known globally for his expressive and emotive classical-pop instrumentals."},
     {"name": "Adele", "bio": "English singer-songwriter known for her powerful vocals, heartfelt lyrics, and massive global success."},
+    {"name": "Charlie Puth", "bio": "American singer, songwriter, and record producer known for global pop smashes Attention and Voicenotes."},
+    {"name": "Arijit Singh", "bio": "Renowned Indian playback singer and composer, celebrated for Kesariya, Saiyaara, and soulful melodies."},
     {"name": "Aria Vale", "bio": "Synthwave producer weaving nostalgic 80s neon soundtracks and retro-futuristic soundscapes."},
     {"name": "Signal Bloom", "bio": "Deep house and electronic project blending driving beats with emotional melodic synth lines."},
     {"name": "Solace Lane", "bio": "Lo-fi and ambient guitar artist crafting quiet bedroom vibes for relaxed study sessions."},
@@ -127,6 +129,54 @@ def generate_catalog():
     # 2. Generate 100 Tracks (Songs)
     tracks = []
     
+    # User requested tracks
+    user_requested_tracks = [
+        {
+            "track_id": "rf-custom-1",
+            "title": "Attention",
+            "artist": "Charlie Puth",
+            "album": "Voicenotes",
+            "genres": ["Pop", "English"],
+            "mood": "happy",
+            "duration": 211,
+            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "cover_image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop",
+            "popularity": 0.99,
+            "type": "song",
+            "release_year": 2017
+        },
+        {
+            "track_id": "rf-custom-2",
+            "title": "Kesariya",
+            "artist": "Arijit Singh",
+            "album": "Brahmastra",
+            "genres": ["Romance", "Hindi"],
+            "mood": "romantic",
+            "duration": 268,
+            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "cover_image": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop",
+            "popularity": 0.99,
+            "type": "song",
+            "release_year": 2022
+        },
+        {
+            "track_id": "rf-custom-3",
+            "title": "Saiyaara",
+            "artist": "Arijit Singh",
+            "album": "Ek Tha Tiger",
+            "genres": ["Romantic", "Hindi"],
+            "mood": "sad",
+            "duration": 253,
+            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "cover_image": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop",
+            "popularity": 0.98,
+            "type": "song",
+            "release_year": 2012
+        }
+    ]
+    for track in user_requested_tracks:
+        tracks.append(track)
+
     # Specific User requested tracks for the 'stress' mood
     requested_stress_tracks = [
         {"title": "Weightless", "artist": "Marconi Union", "album": "Ambient Transmissions", "genre": "Ambient", "duration": 480, "popularity": 0.98, "release_year": 2011},

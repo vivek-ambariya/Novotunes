@@ -210,7 +210,54 @@ function Dashboard({ user, onLogout }) {
         setCatalog(mappedTracks);
         window.__novatunesTrackCatalog = mappedTracks;
       })
-      .catch((err) => console.error('Failed to fetch catalog:', err));
+      .catch((err) => {
+        console.error('Failed to fetch catalog:', err);
+        const fallback = [
+          {
+            id: 'rf-custom-1',
+            track_id: 'rf-custom-1',
+            title: 'Attention',
+            artist: 'Charlie Puth',
+            album: 'Voicenotes',
+            genres: ['Pop', 'English'],
+            mood: 'happy',
+            duration: 211,
+            audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+            cover_image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop',
+            popularity: 0.99,
+            release_year: 2017
+          },
+          {
+            id: 'rf-custom-2',
+            track_id: 'rf-custom-2',
+            title: 'Kesariya',
+            artist: 'Arijit Singh',
+            album: 'Brahmastra',
+            genres: ['Romance', 'Hindi'],
+            mood: 'romantic',
+            duration: 268,
+            audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+            cover_image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop',
+            popularity: 0.99,
+            release_year: 2022
+          },
+          {
+            id: 'rf-custom-3',
+            track_id: 'rf-custom-3',
+            title: 'Saiyaara',
+            artist: 'Arijit Singh',
+            album: 'Ek Tha Tiger',
+            genres: ['Romantic', 'Hindi'],
+            mood: 'sad',
+            duration: 253,
+            audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+            cover_image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop',
+            popularity: 0.98,
+            release_year: 2012
+          }
+        ];
+        if (active) setCatalog(fallback);
+      });
 
     fetch('http://127.0.0.1:8000/api/catalog/artists/')
       .then((r) => r.json())

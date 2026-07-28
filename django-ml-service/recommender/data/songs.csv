@@ -1,4 +1,7 @@
 song_id,title,artist,genres,popularity
 1,Midnight Drive,Aria Vale,"[\"lofi\", \"chill\"]",87
-2,Neon Pulse,Signal Bloom,"[\"electronic\", \"dance\"]",92
+2,Neon Pulse,Signal Bloom,"[\"electronic\", "dance\"]",92
 3,Blue Hour,Solace Lane,"[\"ambient\", \"instrumental\"]",76
+4,Attention,Charlie Puth,"[\"pop\", \"english\"]",99
+5,Kesariya,Arijit Singh,"[\"romance\", \"hindi\"]",99
+6,Saiyaara,Arijit Singh,"[\"romantic\", \"hindi\"]",98

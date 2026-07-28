@@ -41,7 +41,8 @@ class MongoCatalogRepository:
             'podcasts': self.podcasts.count_documents({}),
             'artists': self.artists.count_documents({}),
         }
-        if counts['tracks'] < 100 or counts['playlists'] < 4 or counts['podcasts'] < 5 or counts['artists'] < 50:
+        has_custom_tracks = self.tracks.count_documents({'track_id': 'rf-custom-1'}) > 0
+        if counts['tracks'] < 100 or counts['playlists'] < 4 or counts['podcasts'] < 5 or counts['artists'] < 50 or not has_custom_tracks:
             self.tracks.delete_many({})
             self.playlists.delete_many({})
             self.podcasts.delete_many({})
