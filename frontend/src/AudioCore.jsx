@@ -9,50 +9,85 @@ const AudioPlayerContext = createContext(null);
 
 export const useAudioPlayer = () => useContext(AudioPlayerContext);
 
-const FALLBACK_DEFAULT_TRACKS = [
-  {
-    id: 'rf-custom-1',
-    track_id: 'rf-custom-1',
-    title: 'Attention',
-    artist: 'Charlie Puth',
-    album: 'Voicenotes',
-    genres: ['Pop', 'English'],
-    mood: 'happy',
-    duration: 211,
-    audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-    cover_image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop',
-    popularity: 0.99,
-    release_year: 2017
-  },
-  {
-    id: 'rf-custom-2',
-    track_id: 'rf-custom-2',
-    title: 'Kesariya',
-    artist: 'Arijit Singh',
-    album: 'Brahmastra',
-    genres: ['Romance', 'Hindi'],
-    mood: 'romantic',
-    duration: 268,
-    audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    cover_image: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop',
-    popularity: 0.99,
-    release_year: 2022
-  },
-  {
-    id: 'rf-custom-3',
-    track_id: 'rf-custom-3',
-    title: 'Saiyaara',
-    artist: 'Arijit Singh',
-    album: 'Ek Tha Tiger',
-    genres: ['Romantic', 'Hindi'],
-    mood: 'sad',
-    duration: 253,
-    audio_url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
-    cover_image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop',
-    popularity: 0.98,
-    release_year: 2012
-  }
+const INDIAN_TRACK_TITLES = [
+  { title: 'Kesariya', artist: 'Arijit Singh', album: 'Brahmastra', mood: 'romantic', year: 2022 },
+  { title: 'Saiyaara', artist: 'Arijit Singh', album: 'Ek Tha Tiger', mood: 'sad', year: 2012 },
+  { title: 'Tum Hi Ho', artist: 'Arijit Singh', album: 'Aashiqui 2', mood: 'romantic', year: 2013 },
+  { title: 'Apna Bana Le', artist: 'Arijit Singh', album: 'Bhediya', mood: 'romantic', year: 2022 },
+  { title: 'Channa Mereya', artist: 'Arijit Singh', album: 'Ae Dil Hai Mushkil', mood: 'sad', year: 2016 },
+  { title: 'Raataan Lambiyan', artist: 'Jubin Nautiyal', album: 'Shershaah', mood: 'romantic', year: 2021 },
+  { title: 'Ranjha', artist: 'B Praak', album: 'Shershaah', mood: 'sad', year: 2021 },
+  { title: 'Tere Vaaste', artist: 'Sachin-Jigar', album: 'Zara Hatke Zara Bachke', mood: 'happy', year: 2023 },
+  { title: 'Heeriye', artist: 'Jasleen Royal', album: 'Heeriye Single', mood: 'romantic', year: 2023 },
+  { title: 'Kahani Suno 2.0', artist: 'Kaifi Khalil', album: 'Kahani Suno', mood: 'sad', year: 2022 },
+  { title: 'Jo Tum Mere Ho', artist: 'Anuv Jain', album: 'Indie Originals', mood: 'romantic', year: 2024 },
+  { title: 'Baarishein', artist: 'Anuv Jain', album: 'Baarishein Single', mood: 'calm', year: 2018 },
+  { title: 'Liggi', artist: 'Ritviz', album: 'Dev', mood: 'happy', year: 2019 },
+  { title: 'Udd Gaye', artist: 'Ritviz', album: 'Bacardi House Party', mood: 'party', year: 2017 },
+  { title: 'Cold/Mess', artist: 'Prateek Kuhad', album: 'Cold/Mess EP', mood: 'romantic', year: 2018 },
+  { title: 'Excuses', artist: 'AP Dhillon', album: 'Hidden Gems', mood: 'party', year: 2020 },
+  { title: 'Brown Munde', artist: 'AP Dhillon', album: 'Not By Chance', mood: 'workout', year: 2020 },
+  { title: 'Lover', artist: 'Diljit Dosanjh', album: 'MoonChild Era', mood: 'happy', year: 2021 },
+  { title: 'Lemonade', artist: 'Diljit Dosanjh', album: 'Roar', mood: 'party', year: 2019 },
+  { title: 'Pasoori', artist: 'Ali Sethi', album: 'Coke Studio 14', mood: 'happy', year: 2022 },
+  { title: 'Agar Tum Saath Ho', artist: 'Arijit Singh', album: 'Tamasha', mood: 'sad', year: 2015 },
+  { title: 'Kun Faya Kun', artist: 'A.R. Rahman', album: 'Rockstar', mood: 'calm', year: 2011 },
+  { title: 'Nadaan Parinde', artist: 'Mohit Chauhan', album: 'Rockstar', mood: 'focus', year: 2011 },
+  { title: 'Jai Ho', artist: 'A.R. Rahman', album: 'Slumdog Millionaire', mood: 'happy', year: 2008 },
+  { title: 'Tere Bina', artist: 'A.R. Rahman', album: 'Guru', mood: 'romantic', year: 2007 },
+  { title: 'Mitwa', artist: 'Shankar-Ehsaan-Loy', album: 'Kabhi Alvida Naa Kehna', mood: 'happy', year: 2006 },
+  { title: 'Kal Ho Naa Ho', artist: 'Sonu Nigam', album: 'Kal Ho Naa Ho', mood: 'sad', year: 2003 },
+  { title: 'Main Agar Kahoon', artist: 'Sonu Nigam', album: 'Om Shanti Om', mood: 'romantic', year: 2007 },
+  { title: 'Teri Ore', artist: 'Shreya Ghoshal', album: 'Singh Is Kinng', mood: 'romantic', year: 2008 },
+  { title: 'Pee Loon', artist: 'Mohit Chauhan', album: 'Once Upon a Time in Mumbaai', mood: 'romantic', year: 2010 },
+  { title: 'Zara Sa', artist: 'KK', album: 'Jannat', mood: 'romantic', year: 2008 },
+  { title: 'Labon Ko', artist: 'KK', album: 'Bhool Bhulaiyaa', mood: 'romantic', year: 2007 },
+  { title: 'Tu Jaane Na', artist: 'Atif Aslam', album: 'Ajab Prem Ki Ghazab Kahani', mood: 'romantic', year: 2009 },
+  { title: 'Tera Hone Laga Hoon', artist: 'Atif Aslam', album: 'Ajab Prem Ki Ghazab Kahani', mood: 'happy', year: 2009 },
+  { title: 'Jeene Laga Hoon', artist: 'Atif Aslam', album: 'Ramaiya Vastavaiya', mood: 'happy', year: 2013 },
+  { title: 'Shayad', artist: 'Arijit Singh', album: 'Love Aaj Kal', mood: 'romantic', year: 2020 },
+  { title: 'Tum Se Hi', artist: 'Mohit Chauhan', album: 'Jab We Met', mood: 'romantic', year: 2007 },
+  { title: 'Subhanallah', artist: 'Sreerama Chandra', album: 'Yeh Jawaani Hai Deewani', mood: 'romantic', year: 2013 },
+  { title: 'Kabira', artist: 'Tochi Raina', album: 'Yeh Jawaani Hai Deewani', mood: 'calm', year: 2013 },
+  { title: 'Balam Pichkari', artist: 'Vishal Dadlani', album: 'Yeh Jawaani Hai Deewani', mood: 'party', year: 2013 },
+  { title: 'Badtameez Dil', artist: 'Benny Dayal', album: 'Yeh Jawaani Hai Deewani', mood: 'party', year: 2013 },
+  { title: 'Ghodey Pe Sawaar', artist: 'Amit Trivedi', album: 'Qala', mood: 'happy', year: 2022 },
+  { title: 'Naina Da Kya Kasoor', artist: 'Amit Trivedi', album: 'Andhadhun', mood: 'happy', year: 2018 },
+  { title: 'Ghungroo', artist: 'Arijit Singh', album: 'War', mood: 'party', year: 2019 },
+  { title: 'Nashe Si Chhad Gayi', artist: 'Arijit Singh', album: 'Befikre', mood: 'party', year: 2016 },
+  { title: 'Kar Gayi Chull', artist: 'Badshah', album: 'Kapoor & Sons', mood: 'party', year: 2016 },
+  { title: 'Garmi', artist: 'Badshah', album: 'Street Dancer 3D', mood: 'party', year: 2020 },
+  { title: 'Apna Time Aayega', artist: 'Divine', album: 'Gully Boy', mood: 'workout', year: 2019 },
+  { title: 'Kohinoor', artist: 'Divine', album: 'Kohinoor', mood: 'workout', year: 2019 },
+  { title: 'Attention', artist: 'Charlie Puth', album: 'Voicenotes', mood: 'happy', year: 2017 }
 ];
+
+const COVER_PHOTOS = [
+  "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=300&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1487180142328-0c4e37023af5?q=80&w=300&auto=format&fit=crop"
+];
+
+const FALLBACK_DEFAULT_TRACKS = INDIAN_TRACK_TITLES.map((t, idx) => {
+  const num = (idx % 16) + 1;
+  const id = `ind-${idx + 1}`;
+  return {
+    id: id,
+    track_id: id,
+    title: t.title,
+    artist: t.artist,
+    album: t.album,
+    genres: ['Hindi', 'Indian Music'],
+    mood: t.mood,
+    duration: 210 + (idx * 3) % 90,
+    audio_url: `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-${num}.mp3`,
+    cover_image: COVER_PHOTOS[idx % COVER_PHOTOS.length],
+    popularity: 0.98,
+    release_year: t.year
+  };
+});
 
 export function AudioPlayerProvider({ children }) {
   const [currentTrack, setCurrentTrack] = useState(null);
@@ -68,7 +103,6 @@ export function AudioPlayerProvider({ children }) {
   const [isRepeat, setIsRepeat] = useState(false);
 
   const audioRef = useRef(new Audio());
-  const synthCtxRef = useRef(null);
 
   // Helper: Resolve track from object or ID string
   const resolveTrack = (trackOrId) => {
@@ -106,20 +140,15 @@ export function AudioPlayerProvider({ children }) {
     const onTimeUpdate = () => setCurrentTime(audio.currentTime);
     const onDurationChange = () => setDuration(audio.duration || 0);
     const onEnded = () => handleNextTrack();
-    const onError = (e) => {
-      console.warn("Audio element network/CORS error. Playing synthetic audio fallback.", e);
-    };
 
     audio.addEventListener('timeupdate', onTimeUpdate);
     audio.addEventListener('durationchange', onDurationChange);
     audio.addEventListener('ended', onEnded);
-    audio.addEventListener('error', onError);
 
     return () => {
       audio.removeEventListener('timeupdate', onTimeUpdate);
       audio.removeEventListener('durationchange', onDurationChange);
       audio.removeEventListener('ended', onEnded);
-      audio.removeEventListener('error', onError);
     };
   }, [queue, queueIndex, isRepeat, isShuffle]);
 
@@ -133,7 +162,6 @@ export function AudioPlayerProvider({ children }) {
     const trackId = track.id || track.track_id;
     const trackUrl = track.audio_url || track.audioUrl || `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3`;
 
-    // Set custom queue if provided
     if (customQueue && Array.isArray(customQueue) && customQueue.length > 0) {
       setQueue(customQueue);
       const newIndex = customQueue.findIndex((id) => id === trackId || id === track.id || id === track.track_id);
@@ -152,7 +180,6 @@ export function AudioPlayerProvider({ children }) {
 
     setCurrentTrack(track);
 
-    // Audio Playback
     try {
       audioRef.current.pause();
       audioRef.current.src = trackUrl;
@@ -161,12 +188,9 @@ export function AudioPlayerProvider({ children }) {
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
+          .then(() => setIsPlaying(true))
           .catch((err) => {
-            console.warn('HTML5 Audio autoplay restricted or network error. Retrying audio stream...', err);
-            // Fallback play trigger
+            console.warn('HTML5 Audio autoplay restricted:', err);
             setIsPlaying(true);
           });
       }

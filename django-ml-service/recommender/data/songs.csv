@@ -1,7 +1,51 @@
 song_id,title,artist,genres,popularity
-1,Midnight Drive,Aria Vale,"[\"lofi\", \"chill\"]",87
-2,Neon Pulse,Signal Bloom,"[\"electronic\", "dance\"]",92
-3,Blue Hour,Solace Lane,"[\"ambient\", \"instrumental\"]",76
-4,Attention,Charlie Puth,"[\"pop\", \"english\"]",99
-5,Kesariya,Arijit Singh,"[\"romance\", \"hindi\"]",99
-6,Saiyaara,Arijit Singh,"[\"romantic\", \"hindi\"]",98
+1,Kesariya,Arijit Singh,"[\"Hindi\", \"Romantic\"]",99
+2,Saiyaara,Arijit Singh,"[\"Hindi\", \"Romantic\"]",98
+3,Tum Hi Ho,Arijit Singh,"[\"Hindi\", \"Romantic\"]",99
+4,Apna Bana Le,Arijit Singh,"[\"Hindi\", \"Romantic\"]",99
+5,Channa Mereya,Arijit Singh,"[\"Hindi\", \"Sad\"]",99
+6,Raataan Lambiyan,Jubin Nautiyal,"[\"Hindi\", \"Romantic\"]",98
+7,Ranjha,B Praak,"[\"Hindi\", \"Sad\"]",97
+8,Tere Vaaste,Sachin-Jigar,"[\"Hindi\", \"Pop\"]",96
+9,Heeriye,Jasleen Royal,"[\"Hindi\", \"Romantic\"]",98
+10,Kahani Suno 2.0,Kaifi Khalil,"[\"Hindi\", \"Sad\"]",97
+11,Jo Tum Mere Ho,Anuv Jain,"[\"Indie\", \"Romantic\"]",96
+12,Baarishein,Anuv Jain,"[\"Indie\", \"Acoustic\"]",97
+13,Liggi,Ritviz,"[\"Indie\", \"Electronic\"]",95
+14,Udd Gaye,Ritviz,"[\"Indie\", \"Electronic\"]",96
+15,Cold/Mess,Prateek Kuhad,"[\"Indie\", \"Acoustic\"]",96
+16,Excuses,AP Dhillon,"[\"Punjabi\", \"Pop\"]",98
+17,Brown Munde,AP Dhillon,"[\"Punjabi\", \"Hip-Hop\"]",99
+18,Lover,Diljit Dosanjh,"[\"Punjabi\", \"Pop\"]",98
+19,Lemonade,Diljit Dosanjh,"[\"Punjabi\", \"Party\"]",95
+20,Pasoori,Ali Sethi,"[\"Punjabi\", \"Folk\"]",99
+21,Agar Tum Saath Ho,Arijit Singh,"[\"Hindi\", \"Sad\"]",99
+22,Kun Faya Kun,A.R. Rahman,"[\"Sufi\", \"Spiritual\"]",99
+23,Nadaan Parinde,Mohit Chauhan,"[\"Hindi\", \"Rock\"]",97
+24,Jai Ho,A.R. Rahman,"[\"Hindi\", \"Upbeat\"]",98
+25,Tere Bina,A.R. Rahman,"[\"Hindi\", \"Romantic\"]",96
+26,Mitwa,Shankar-Ehsaan-Loy,"[\"Hindi\", \"Pop\"]",96
+27,Kal Ho Naa Ho,Sonu Nigam,"[\"Hindi\", \"Classic\"]",99
+28,Main Agar Kahoon,Sonu Nigam,"[\"Hindi\", \"Romantic\"]",97
+29,Teri Ore,Shreya Ghoshal,"[\"Hindi\", \"Romantic\"]",97
+30,Pee Loon,Mohit Chauhan,"[\"Hindi\", \"Romantic\"]",96
+31,Zara Sa,KK,"[\"Hindi\", \"Romantic\"]",97
+32,Labon Ko,KK,"[\"Hindi\", \"Romantic\"]",96
+33,Tu Jaane Na,Atif Aslam,"[\"Hindi\", \"Romantic\"]",98
+34,Tera Hone Laga Hoon,Atif Aslam,"[\"Hindi\", \"Pop\"]",97
+35,Jeene Laga Hoon,Atif Aslam,"[\"Hindi\", \"Romantic\"]",96
+36,Shayad,Arijit Singh,"[\"Hindi\", \"Romantic\"]",97
+37,Tum Se Hi,Mohit Chauhan,"[\"Hindi\", \"Romantic\"]",98
+38,Subhanallah,Sreerama Chandra,"[\"Hindi\", \"Romantic\"]",96
+39,Kabira,Tochi Raina,"[\"Hindi\", \"Folk\"]",97
+40,Balam Pichkari,Vishal Dadlani,"[\"Hindi\", \"Party\"]",98
+41,Badtameez Dil,Benny Dayal,"[\"Hindi\", \"Party\"]",98
+42,Ghodey Pe Sawaar,Amit Trivedi,"[\"Hindi\", \"Retro\"]",96
+43,Naina Da Kya Kasoor,Amit Trivedi,"[\"Hindi\", \"Retro\"]",96
+44,Ghungroo,Arijit Singh,"[\"Hindi\", \"Party\"]",97
+45,Nashe Si Chhad Gayi,Arijit Singh,"[\"Hindi\", \"Party\"]",97
+46,Kar Gayi Chull,Badshah,"[\"Hindi\", \"Party\"]",97
+47,Garmi,Badshah,"[\"Hindi\", \"Party\"]",96
+48,Apna Time Aayega,Divine,"[\"Hip-Hop\", \"Hindi\"]",98
+49,Kohinoor,Divine,"[\"Hip-Hop\", \"Hindi\"]",97
+50,Attention,Charlie Puth,"[\"Pop\", \"English\"]",99

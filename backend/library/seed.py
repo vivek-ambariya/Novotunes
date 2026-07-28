@@ -2,97 +2,125 @@ import random
 
 # Pools of high-quality Unsplash image URLs for premium visual design
 ARTIST_PHOTOS = [
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop", # Woman singing/portrait
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop", # Man portrait
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop", # Woman portrait
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop", # Man portrait 2
-    "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=300&auto=format&fit=crop", # Young man portrait
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop", # Woman portrait 3
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop", # Man portrait 3
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop", # Woman smiling
-    "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=300&auto=format&fit=crop", # Man style
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop", # Man suit
-    "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=300&auto=format&fit=crop", # Woman portrait 4
-    "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=300&auto=format&fit=crop", # Man profile
-    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=300&auto=format&fit=crop", # Woman portrait 5
-    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=300&auto=format&fit=crop", # Woman portrait 6
-    "https://images.unsplash.com/photo-1504257404764-5a965993e285?q=80&w=300&auto=format&fit=crop"  # Man retro
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop"
 ]
 
 COVER_PHOTOS = [
-    "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop", # Neon purple swirl
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop", # Stage lights
-    "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop", # Abstract paint splash
-    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=300&auto=format&fit=crop", # DJ mixer
-    "https://images.unsplash.com/photo-1487180142328-0c4e37023af5?q=80&w=300&auto=format&fit=crop", # Vinyl record player
-    "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=300&auto=format&fit=crop", # Classical violin
-    "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=300&auto=format&fit=crop", # Rock concert hands
-    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=300&auto=format&fit=crop", # Retro microphone
-    "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=300&auto=format&fit=crop", # Headphones on table
-    "https://images.unsplash.com/photo-1446057032654-9d8885b7518a?q=80&w=300&auto=format&fit=crop", # Guitar silhouette
-    "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=300&auto=format&fit=crop", # Abstract lights
-    "https://images.unsplash.com/photo-1526218626217-dc65a29bb444?q=80&w=300&auto=format&fit=crop", # Singer in blue light
-    "https://images.unsplash.com/photo-1453090923802-60c3d5942630?q=80&w=300&auto=format&fit=crop", # Retro stereo speakers
-    "https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=300&auto=format&fit=crop", # Concert smoke and lasers
-    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=300&auto=format&fit=crop"  # Sunset silhouette band
+    "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1487180142328-0c4e37023af5?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=300&auto=format&fit=crop"
 ]
 
 PODCAST_PHOTOS = [
-    "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=300&auto=format&fit=crop", # Mic close up
-    "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=300&auto=format&fit=crop", # Podcast table
-    "https://images.unsplash.com/photo-1589903308904-1010c2294adc?q=80&w=300&auto=format&fit=crop", # Recording setup
-    "https://images.unsplash.com/photo-1618609378039-b572f64c5b42?q=80&w=300&auto=format&fit=crop", # Sound waves
-    "https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?q=80&w=300&auto=format&fit=crop"  # Cozy study space
+    "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=300&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=300&auto=format&fit=crop"
 ]
 
 # Supported artist details
 ARTIST_DATA = [
-    {"name": "Marconi Union", "bio": "Ambient pioneers famous for creating highly calming soundscapes backed by sound therapy science."},
-    {"name": "Coldplay", "bio": "British rock band formed in London in 1996, one of the most successful acts of the 21st century."},
-    {"name": "Jack Johnson", "bio": "American singer-songwriter and former professional surfer known for soft rock and acoustic pop."},
-    {"name": "Yiruma", "bio": "South Korean pianist and composer known globally for his expressive and emotive classical-pop instrumentals."},
-    {"name": "Adele", "bio": "English singer-songwriter known for her powerful vocals, heartfelt lyrics, and massive global success."},
+    {"name": "Arijit Singh", "bio": "Renowned Indian playback singer and music composer, one of the most streamed artists in Indian music history."},
+    {"name": "A.R. Rahman", "bio": "Academy Award and Grammy-winning Indian composer, producer, and singer known for redefining Indian film music."},
+    {"name": "Shreya Ghoshal", "bio": "One of India's most celebrated playback singers, known for her wide vocal range and timeless melodies."},
+    {"name": "Pritam", "bio": "Prolific Indian music director and composer responsible for scores of chart-topping Bollywood hits."},
+    {"name": "AP Dhillon", "bio": "Indo-Canadian singer, songwriter, and rapper pioneering global Punjabi pop and hip-hop."},
+    {"name": "Diljit Dosanjh", "bio": "International Punjabi superstar, singer, and actor bringing Punjabi music to global stadium stages."},
+    {"name": "Anuv Jain", "bio": "Popular Indian indie singer-songwriter known for intimate acoustic hits like Baarishein and Jo Tum Mere Ho."},
+    {"name": "Ritviz", "bio": "Indian electronic music producer and singer famous for unique fusion of Indian vocal melodies and bass music."},
+    {"name": "Prateek Kuhad", "bio": "Critically acclaimed Indian indie folk-pop singer-songwriter praised globally for soulful ballads."},
+    {"name": "Atif Aslam", "bio": "Beloved vocal powerhouse famous across South Asia for romantic ballads and Sufi rock anthems."},
     {"name": "Charlie Puth", "bio": "American singer, songwriter, and record producer known for global pop smashes Attention and Voicenotes."},
-    {"name": "Arijit Singh", "bio": "Renowned Indian playback singer and composer, celebrated for Kesariya, Saiyaara, and soulful melodies."},
-    {"name": "Aria Vale", "bio": "Synthwave producer weaving nostalgic 80s neon soundtracks and retro-futuristic soundscapes."},
-    {"name": "Signal Bloom", "bio": "Deep house and electronic project blending driving beats with emotional melodic synth lines."},
-    {"name": "Solace Lane", "bio": "Lo-fi and ambient guitar artist crafting quiet bedroom vibes for relaxed study sessions."},
-    {"name": "Kairo Jet", "bio": "Chillhop beatmaker blending jazzy chord progressions with dusty boom-bap rhythm sections."},
-    {"name": "Nova Drift", "bio": "Indie pop outfit crafting sun-drenched guitar loops and upbeat driving rhythms."},
-    {"name": "Celeste Minor", "bio": "Dreamy space ambient composer designing vast, floating soundtracks for starry nights."},
-    {"name": "Lux Fader", "bio": "Jazz fusion producer blending classic electric keyboard progressions with modern breakbeats."},
-    {"name": "Solstice Keys", "bio": "Neoclassical composer whose minimalist piano pieces provide comforting focus atmospheres."}
+    {"name": "Badshah", "bio": "Indian rapper and music producer known for party anthems and massive club tracks."},
+    {"name": "Divine", "bio": "Trailblazing Indian hip-hop artist from Mumbai, founder of Gully Gang and inspiration for Gully Boy."},
+    {"name": "Mohit Chauhan", "bio": "Soulful Indian singer known for iconic rock and romantic tracks in Rockstar and Jab We Met."},
+    {"name": "KK", "bio": "Legendary Indian playback singer whose emotive voice defined a generation of Bollywood classics."},
+    {"name": "Sonu Nigam", "bio": "Master Indian playback singer celebrated for extraordinary versatility and iconic classics."},
+    {"name": "Jasleen Royal", "bio": "Indian singer and composer known for hit romantic tracks like Heeriye and Ranjha."}
 ]
 
-# Additional names to make up 55+ total artists
 ADDITIONAL_ARTIST_NAMES = [
-    "Echo Pulse", "Luna Eclipse", "Stellar Tide", "Neon Horizon", "Vibe Architect",
-    "Prism Ray", "Dusk Runner", "Satin Waves", "Golden Haze", "Quiet Storm",
-    "Digital Bloom", "Acoustic Drift", "Beat Whisperer", "Urban Lo-Fi", "Synth Symphony",
-    "Velvet Tone", "Canyon Echo", "Ocean Breeze", "Timber & Twine", "Northern Light",
-    "Mellow Glow", "Midnight Muse", "Copper String", "Restless Wind", "Wandering Soul",
-    "Infinite Loop", "Static Cloud", "Hologram Sky", "Subtle Groove", "Driftwood",
-    "Frequency Shift", "Astral Flight", "Saffron Moon", "Fable & Song", "Deep River",
-    "Solar Flair", "Coastal Drive", "Haze & Thunder", "Vivid Dream", "Chamber Keys",
-    "Sage Sound", "Wildflower", "Indigo Sky", "Ghost Beat"
+    "Jubin Nautiyal", "B Praak", "Sachin-Jigar", "Vishal-Shekhar", "Shankar-Ehsaan-Loy",
+    "Amit Trivedi", "Ali Sethi", "Kaifi Khalil", "Shalmali Kholgade", "Benny Dayal",
+    "Shafqat Amanat Ali", "Tochi Raina", "Rekha Bhardwaj", "Sukhwinder Singh", "Alka Yagnik"
 ]
 
 ALBUM_NAMES = [
-    "Nocturne Systems", "Room Tone", "Flow State", "Skyline", "Late Session", "Daybreak",
-    "Neon Dreams", "Echo Chamber", "Subterranean", "Aura", "Lost in Time", "Future Nostalgia",
-    "Ethereal", "Holographic", "Unspoken", "Prism", "Drift", "Static Waves", "Resonance", "Solitude"
+    "Brahmastra", "Shershaah", "Rockstar", "Aashiqui 2", "Yeh Jawaani Hai Deewani", "Tamasha",
+    "Ae Dil Hai Mushkil", "Jab We Met", "Cocktail", "Gully Boy", "MoonChild Era", "Indie Chill"
 ]
 
-GENRES = ["Electronic", "Synthwave", "Dance", "Ambient", "Lo-Fi", "Chillhop", "Indie Pop", "Jazz Fusion", "Piano", "Acoustic"]
+GENRES = ["Hindi", "Punjabi", "Bollywood", "Romantic", "Indie", "Pop", "Sufi", "Hip-Hop"]
+MOODS = ["romantic", "happy", "sad", "party", "focus", "calm", "workout", "travel"]
 
-MOODS = ["happy", "sad", "romantic", "angry", "relaxed", "calm", "focus", "study", "workout", "party", "sleep", "travel", "stress", "motivation"]
+# 50 ICONIC INDIAN TRACKS
+INDIAN_TRACKS = [
+    {"title": "Kesariya", "artist": "Arijit Singh", "album": "Brahmastra", "genre": "Hindi", "mood": "romantic", "year": 2022},
+    {"title": "Saiyaara", "artist": "Arijit Singh", "album": "Ek Tha Tiger", "genre": "Hindi", "mood": "sad", "year": 2012},
+    {"title": "Tum Hi Ho", "artist": "Arijit Singh", "album": "Aashiqui 2", "genre": "Hindi", "mood": "romantic", "year": 2013},
+    {"title": "Apna Bana Le", "artist": "Arijit Singh", "album": "Bhediya", "genre": "Hindi", "mood": "romantic", "year": 2022},
+    {"title": "Channa Mereya", "artist": "Arijit Singh", "album": "Ae Dil Hai Mushkil", "genre": "Hindi", "mood": "sad", "year": 2016},
+    {"title": "Raataan Lambiyan", "artist": "Jubin Nautiyal", "album": "Shershaah", "genre": "Hindi", "mood": "romantic", "year": 2021},
+    {"title": "Ranjha", "artist": "B Praak", "album": "Shershaah", "genre": "Hindi", "mood": "sad", "year": 2021},
+    {"title": "Tere Vaaste", "artist": "Sachin-Jigar", "album": "Zara Hatke Zara Bachke", "genre": "Hindi", "mood": "happy", "year": 2023},
+    {"title": "Heeriye", "artist": "Jasleen Royal", "album": "Heeriye Single", "genre": "Hindi", "mood": "romantic", "year": 2023},
+    {"title": "Kahani Suno 2.0", "artist": "Kaifi Khalil", "album": "Kahani Suno", "genre": "Hindi", "mood": "sad", "year": 2022},
+    {"title": "Jo Tum Mere Ho", "artist": "Anuv Jain", "album": "Indie Originals", "genre": "Indie", "mood": "romantic", "year": 2024},
+    {"title": "Baarishein", "artist": "Anuv Jain", "album": "Baarishein Single", "genre": "Indie", "mood": "calm", "year": 2018},
+    {"title": "Liggi", "artist": "Ritviz", "album": "Dev", "genre": "Indie", "mood": "happy", "year": 2019},
+    {"title": "Udd Gaye", "artist": "Ritviz", "album": "Bacardi House Party", "genre": "Indie", "mood": "party", "year": 2017},
+    {"title": "Cold/Mess", "artist": "Prateek Kuhad", "album": "Cold/Mess EP", "genre": "Indie", "mood": "romantic", "year": 2018},
+    {"title": "Excuses", "artist": "AP Dhillon", "album": "Hidden Gems", "genre": "Punjabi", "mood": "party", "year": 2020},
+    {"title": "Brown Munde", "artist": "AP Dhillon", "album": "Not By Chance", "genre": "Punjabi", "mood": "workout", "year": 2020},
+    {"title": "Lover", "artist": "Diljit Dosanjh", "album": "MoonChild Era", "genre": "Punjabi", "mood": "happy", "year": 2021},
+    {"title": "Lemonade", "artist": "Diljit Dosanjh", "album": "Roar", "genre": "Punjabi", "mood": "party", "year": 2019},
+    {"title": "Pasoori", "artist": "Ali Sethi", "album": "Coke Studio 14", "genre": "Punjabi", "mood": "happy", "year": 2022},
+    {"title": "Agar Tum Saath Ho", "artist": "Arijit Singh", "album": "Tamasha", "genre": "Hindi", "mood": "sad", "year": 2015},
+    {"title": "Kun Faya Kun", "artist": "A.R. Rahman", "album": "Rockstar", "genre": "Sufi", "mood": "calm", "year": 2011},
+    {"title": "Nadaan Parinde", "artist": "Mohit Chauhan", "album": "Rockstar", "genre": "Hindi", "mood": "focus", "year": 2011},
+    {"title": "Jai Ho", "artist": "A.R. Rahman", "album": "Slumdog Millionaire", "genre": "Hindi", "mood": "happy", "year": 2008},
+    {"title": "Tere Bina", "artist": "A.R. Rahman", "album": "Guru", "genre": "Hindi", "mood": "romantic", "year": 2007},
+    {"title": "Mitwa", "artist": "Shankar-Ehsaan-Loy", "album": "Kabhi Alvida Naa Kehna", "genre": "Hindi", "mood": "happy", "year": 2006},
+    {"title": "Kal Ho Naa Ho", "artist": "Sonu Nigam", "album": "Kal Ho Naa Ho", "genre": "Hindi", "mood": "sad", "year": 2003},
+    {"title": "Main Agar Kahoon", "artist": "Sonu Nigam", "album": "Om Shanti Om", "genre": "Hindi", "mood": "romantic", "year": 2007},
+    {"title": "Teri Ore", "artist": "Shreya Ghoshal", "album": "Singh Is Kinng", "genre": "Hindi", "mood": "romantic", "year": 2008},
+    {"title": "Pee Loon", "artist": "Mohit Chauhan", "album": "Once Upon a Time in Mumbaai", "genre": "Hindi", "mood": "romantic", "year": 2010},
+    {"title": "Zara Sa", "artist": "KK", "album": "Jannat", "genre": "Hindi", "mood": "romantic", "year": 2008},
+    {"title": "Labon Ko", "artist": "KK", "album": "Bhool Bhulaiyaa", "genre": "Hindi", "mood": "romantic", "year": 2007},
+    {"title": "Tu Jaane Na", "artist": "Atif Aslam", "album": "Ajab Prem Ki Ghazab Kahani", "genre": "Hindi", "mood": "romantic", "year": 2009},
+    {"title": "Tera Hone Laga Hoon", "artist": "Atif Aslam", "album": "Ajab Prem Ki Ghazab Kahani", "genre": "Hindi", "mood": "happy", "year": 2009},
+    {"title": "Jeene Laga Hoon", "artist": "Atif Aslam", "album": "Ramaiya Vastavaiya", "genre": "Hindi", "mood": "happy", "year": 2013},
+    {"title": "Shayad", "artist": "Arijit Singh", "album": "Love Aaj Kal", "genre": "Hindi", "mood": "romantic", "year": 2020},
+    {"title": "Tum Se Hi", "artist": "Mohit Chauhan", "album": "Jab We Met", "genre": "Hindi", "mood": "romantic", "year": 2007},
+    {"title": "Subhanallah", "artist": "Sreerama Chandra", "album": "Yeh Jawaani Hai Deewani", "genre": "Hindi", "mood": "romantic", "year": 2013},
+    {"title": "Kabira", "artist": "Tochi Raina", "album": "Yeh Jawaani Hai Deewani", "genre": "Hindi", "mood": "calm", "year": 2013},
+    {"title": "Balam Pichkari", "artist": "Vishal Dadlani", "album": "Yeh Jawaani Hai Deewani", "genre": "Hindi", "mood": "party", "year": 2013},
+    {"title": "Badtameez Dil", "artist": "Benny Dayal", "album": "Yeh Jawaani Hai Deewani", "genre": "Hindi", "mood": "party", "year": 2013},
+    {"title": "Ghodey Pe Sawaar", "artist": "Amit Trivedi", "album": "Qala", "genre": "Hindi", "mood": "happy", "year": 2022},
+    {"title": "Naina Da Kya Kasoor", "artist": "Amit Trivedi", "album": "Andhadhun", "genre": "Hindi", "mood": "happy", "year": 2018},
+    {"title": "Ghungroo", "artist": "Arijit Singh", "album": "War", "genre": "Hindi", "mood": "party", "year": 2019},
+    {"title": "Nashe Si Chhad Gayi", "artist": "Arijit Singh", "album": "Befikre", "genre": "Hindi", "mood": "party", "year": 2016},
+    {"title": "Kar Gayi Chull", "artist": "Badshah", "album": "Kapoor & Sons", "genre": "Hindi", "mood": "party", "year": 2016},
+    {"title": "Garmi", "artist": "Badshah", "album": "Street Dancer 3D", "genre": "Hindi", "mood": "party", "year": 2020},
+    {"title": "Apna Time Aayega", "artist": "Divine", "album": "Gully Boy", "genre": "Hip-Hop", "mood": "workout", "year": 2019},
+    {"title": "Kohinoor", "artist": "Divine", "album": "Kohinoor", "genre": "Hip-Hop", "mood": "workout", "year": 2019},
+    {"title": "Attention", "artist": "Charlie Puth", "album": "Voicenotes", "genre": "Pop", "mood": "happy", "year": 2017}
+]
 
 def generate_catalog():
-    # 1. Generate 55+ Artists
+    # 1. Generate Artists
     artists = []
     all_artist_names = []
     
-    # Add structured artists first
     for i, data in enumerate(ARTIST_DATA):
         name = data["name"]
         all_artist_names.append(name)
@@ -101,170 +129,70 @@ def generate_catalog():
             "name": name,
             "profile_pic": ARTIST_PHOTOS[i % len(ARTIST_PHOTOS)],
             "bio": data["bio"],
-            "monthly_listeners": (15000000 - (i * 900000)) + random.randint(1000, 50000),
+            "monthly_listeners": (18000000 - (i * 800000)) + random.randint(1000, 50000),
             "similar_artists": []
         })
         
-    # Fill in rest of 55+ artists
-    start_idx = len(artists)
     for j, name in enumerate(ADDITIONAL_ARTIST_NAMES):
         all_artist_names.append(name)
-        idx = start_idx + j
+        idx = len(artists)
         artists.append({
             "artist_id": f"art-{idx+1}",
             "name": name,
             "profile_pic": ARTIST_PHOTOS[idx % len(ARTIST_PHOTOS)],
-            "bio": f"Alternative music project from {name}, blending indie roots with modern sonic textures.",
-            "monthly_listeners": (2500000 - (j * 50000)) + random.randint(-2000, 2000),
+            "bio": f"Indian music master {name}, crafting chart-topping Bollywood and regional tracks.",
+            "monthly_listeners": (8500000 - (j * 200000)) + random.randint(1000, 20000),
             "similar_artists": []
         })
         
-    # Populate similar artists
     for artist in artists:
         similars = [a["name"] for a in artists if a["name"] != artist["name"]]
-        # Seed pseudo-randomly based on name hash for stability
         random_gen = random.Random(artist["name"])
-        artist["similar_artists"] = random_gen.sample(similars, 4)
+        artist["similar_artists"] = random_gen.sample(similars, min(4, len(similars)))
 
-    # 2. Generate 100 Tracks (Songs)
+    # 2. Populate 50 Indian Tracks
     tracks = []
-    
-    # User requested tracks
-    user_requested_tracks = [
-        {
-            "track_id": "rf-custom-1",
-            "title": "Attention",
-            "artist": "Charlie Puth",
-            "album": "Voicenotes",
-            "genres": ["Pop", "English"],
-            "mood": "happy",
-            "duration": 211,
-            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-            "cover_image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop",
-            "popularity": 0.99,
-            "type": "song",
-            "release_year": 2017
-        },
-        {
-            "track_id": "rf-custom-2",
-            "title": "Kesariya",
-            "artist": "Arijit Singh",
-            "album": "Brahmastra",
-            "genres": ["Romance", "Hindi"],
-            "mood": "romantic",
-            "duration": 268,
-            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-            "cover_image": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=300&auto=format&fit=crop",
-            "popularity": 0.99,
-            "type": "song",
-            "release_year": 2022
-        },
-        {
-            "track_id": "rf-custom-3",
-            "title": "Saiyaara",
-            "artist": "Arijit Singh",
-            "album": "Ek Tha Tiger",
-            "genres": ["Romantic", "Hindi"],
-            "mood": "sad",
-            "duration": 253,
-            "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-            "cover_image": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=300&auto=format&fit=crop",
-            "popularity": 0.98,
-            "type": "song",
-            "release_year": 2012
-        }
-    ]
-    for track in user_requested_tracks:
-        tracks.append(track)
-
-    # Specific User requested tracks for the 'stress' mood
-    requested_stress_tracks = [
-        {"title": "Weightless", "artist": "Marconi Union", "album": "Ambient Transmissions", "genre": "Ambient", "duration": 480, "popularity": 0.98, "release_year": 2011},
-        {"title": "Fix You", "artist": "Coldplay", "album": "X&Y", "genre": "Rock", "duration": 295, "popularity": 0.99, "release_year": 2005},
-        {"title": "Better Together", "artist": "Jack Johnson", "album": "In Between Dreams", "genre": "Acoustic", "duration": 207, "popularity": 0.96, "release_year": 2005},
-        {"title": "River Flows in You", "artist": "Yiruma", "album": "First Love", "genre": "Piano", "duration": 188, "popularity": 0.97, "release_year": 2001},
-        {"title": "Someone Like You", "artist": "Adele", "album": "21", "genre": "Pop", "duration": 285, "popularity": 0.99, "release_year": 2011}
-    ]
-    
-    for i, spec in enumerate(requested_stress_tracks):
+    for i, item in enumerate(INDIAN_TRACKS):
+        sound_num = (i % 16) + 1
         tracks.append({
-            "track_id": f"rf-spec-{i+1}",
-            "title": spec["title"],
-            "artist": spec["artist"],
-            "album": spec["album"],
-            "genres": [spec["genre"]],
-            "mood": "stress",
-            "duration": spec["duration"],
-            "audio_url": f"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-{i+1}.mp3",
+            "track_id": f"ind-{i+1}",
+            "title": item["title"],
+            "artist": item["artist"],
+            "album": item["album"],
+            "genres": [item["genre"], "Indian"],
+            "mood": item["mood"],
+            "duration": 210 + (i * 3) % 90,
+            "audio_url": f"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-{sound_num}.mp3",
             "cover_image": COVER_PHOTOS[i % len(COVER_PHOTOS)],
-            "popularity": spec["popularity"],
+            "popularity": round(0.99 - (i * 0.005), 2),
             "type": "song",
-            "release_year": spec["release_year"]
+            "release_year": item["year"]
         })
-        
-    # Programmatically generate remaining 95 songs to make up 100 total
-    total_tracks_needed = 100
-    generated_count = total_tracks_needed - len(tracks)
-    
-    for k in range(generated_count):
-        idx = len(tracks)
-        
-        # Pick artist and album stably based on index
-        artist = all_artist_names[idx % len(all_artist_names)]
-        album = ALBUM_NAMES[idx % len(ALBUM_NAMES)]
-        genre = GENRES[idx % len(GENRES)]
-        mood = MOODS[idx % len(MOODS)]
-        
-        # Adjust values slightly for variety
-        duration = 180 + ((idx * 7) % 240)
-        popularity = round(0.50 + ((idx * 0.005) % 0.48), 2)
-        release_year = 2018 + (idx % 9)
-        sound_helix_num = (idx % 16) + 1
-        
-        tracks.append({
-            "track_id": f"rf-gen-{idx+1}",
-            "title": f"Chasing {album.split()[0]} {idx+1}",
-            "artist": artist,
-            "album": album,
-            "genres": [genre],
-            "mood": mood,
-            "duration": duration,
-            "audio_url": f"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-{sound_helix_num}.mp3",
-            "cover_image": COVER_PHOTOS[idx % len(COVER_PHOTOS)],
-            "popularity": popularity,
-            "type": "song",
-            "release_year": release_year
-        })
-        
-    # 3. Generate 20 Podcast Episodes across 5 different podcast shows
+
+    # 3. Generate Podcasts
     podcasts = []
-    podcast_categories = ["Science", "Business", "Psychology", "Technology", "Arts"]
     podcast_titles = [
-        {"title": "The Power of Habit", "host": "TED Radio Hour", "description": "Behavior change, creativity, and how routines shape human performance.", "cat": "Science"},
-        {"title": "How Music Affects Your Brain", "host": "BrainStuff", "description": "The neuroscience of rhythm, memory, and emotional regulation.", "cat": "Science"},
-        {"title": "Creativity and Flow", "host": "The Psychology Podcast", "description": "How artists, writers, and engineers build repeatable focus rituals.", "cat": "Psychology"},
-        {"title": "Tech Talk Weekly", "host": "Tech Disruptors", "description": "Deep-dives into future tech, developer tools, and AI architectures.", "cat": "Technology"},
-        {"title": "The Art of Business", "host": "HBR IdeaCast", "description": "Unveiling leadership habits, marketing tactics, and scaling strategies.", "cat": "Business"}
+        {"title": "Bollywood Music Unplugged", "host": "Mirchi FM", "description": "Behind the scenes with Arijit Singh, A.R. Rahman & top Indian composers.", "cat": "Music"},
+        {"title": "Coke Studio Stories", "host": "Coke Studio", "description": "Exploring South Asian fusion, folk roots, and modern Sufi music.", "cat": "Culture"},
+        {"title": "The Indian Music Podcast", "host": "Gaana Originals", "description": "Deep-dives into classical ragas, indie pop, and Punjabi hip-hop.", "cat": "Arts"},
+        {"title": "Desi Hip-Hop Uncut", "host": "Gully Gang Radio", "description": "Underground street rap from Mumbai, Delhi, and Punjab.", "cat": "Hip-Hop"},
+        {"title": "Maestros of Melody", "host": "Spotify India", "description": "Interviews with legendary playback singers and music directors.", "cat": "Music"}
     ]
     
     for p_idx, pod in enumerate(podcast_titles):
         p_id = f"pod-{p_idx+1}"
         episodes = []
-        
-        # 4 episodes per podcast to get exactly 20 podcast episodes total
         for ep_idx in range(4):
-            ep_id = f"{p_id}-ep-{ep_idx+1}"
-            sound_helix_num = 1 + ((p_idx * 4 + ep_idx) % 16)
+            sound_num = 1 + ((p_idx * 4 + ep_idx) % 16)
             episodes.append({
-                "episode_id": ep_id,
-                "title": f"Episode {ep_idx+1}: {pod['title']} Deepdive",
-                "description": f"Exploring fundamental concepts and interviewing leading industry researchers regarding {pod['title'].lower()}.",
-                "duration": 1500 + (ep_idx * 120),
-                "audio_url": f"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-{sound_helix_num}.mp3",
+                "episode_id": f"{p_id}-ep-{ep_idx+1}",
+                "title": f"Episode {ep_idx+1}: {pod['title']} Special",
+                "description": f"Exploring acoustic arrangements and interview highlights regarding {pod['title']}.",
+                "duration": 1200 + (ep_idx * 150),
+                "audio_url": f"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-{sound_num}.mp3",
                 "cover_image": PODCAST_PHOTOS[p_idx % len(PODCAST_PHOTOS)],
                 "release_date": f"2026-07-{(p_idx*5 + ep_idx + 1):02d}"
             })
-            
         podcasts.append({
             "podcast_id": p_id,
             "title": pod["title"],
@@ -274,43 +202,43 @@ def generate_catalog():
             "category": pod["cat"],
             "episodes": episodes
         })
-        
-    # 4. Generate Curated Playlists containing tracks
+
+    # 4. Curated Indian Playlists
     playlists = [
         {
             "playlist_id": "pl-chill",
-            "name": "Late Night Drift",
+            "name": "Bollywood Romance & Chill",
             "owner_id": "system",
             "is_public": True,
-            "tracks": ["rf-spec-1", "rf-spec-3", "rf-gen-12", "rf-gen-24"],
-            "description": "Low-light tracks for deep focus and late-night listening."
+            "tracks": ["ind-1", "ind-2", "ind-3", "ind-4", "ind-5", "ind-9", "ind-10", "ind-11"],
+            "description": "Unwind with the ultimate soulful Hindi romantic melodies."
         },
         {
             "playlist_id": "pl-energy",
-            "name": "Pulse Boost",
+            "name": "Punjabi Hype & Party Hits",
             "owner_id": "system",
             "is_public": True,
-            "tracks": ["rf-spec-2", "rf-gen-8", "rf-gen-18", "rf-gen-32"],
-            "description": "Uplifting tracks for motion, hype, and momentum."
+            "tracks": ["ind-16", "ind-17", "ind-18", "ind-19", "ind-20", "ind-40", "ind-41", "ind-47"],
+            "description": "High-energy Punjabi beats and explosive Bollywood dance anthems."
         },
         {
             "playlist_id": "pl-stress",
-            "name": "Stress Relief Lounge",
+            "name": "Indian Sufi & Calm Acoustic",
             "owner_id": "system",
             "is_public": True,
-            "tracks": ["rf-spec-1", "rf-spec-2", "rf-spec-3", "rf-spec-4", "rf-spec-5"],
-            "description": "Curated tracks to melt anxiety away and relax your mind."
+            "tracks": ["ind-12", "ind-15", "ind-21", "ind-22", "ind-23", "ind-25", "ind-37", "ind-39"],
+            "description": "Soothing acoustic tunes and spiritual Sufi soundscapes."
         },
         {
             "playlist_id": "pl-focus",
-            "name": "Focus Flow State",
+            "name": "Indian Indie & Lo-Fi Flow",
             "owner_id": "system",
             "is_public": True,
-            "tracks": ["rf-gen-6", "rf-gen-16", "rf-gen-26", "rf-gen-36", "rf-gen-46"],
-            "description": "Minimal instrumentals for developers, students, and writers."
+            "tracks": ["ind-11", "ind-12", "ind-13", "ind-14", "ind-15", "ind-42", "ind-43", "ind-44"],
+            "description": "Chill Indian indie pop and relaxing bedroom acoustic loops."
         }
     ]
-    
+
     return artists, tracks, podcasts, playlists
 
 DEFAULT_ARTISTS, DEFAULT_TRACKS, DEFAULT_PODCASTS, DEFAULT_PLAYLISTS = generate_catalog()
