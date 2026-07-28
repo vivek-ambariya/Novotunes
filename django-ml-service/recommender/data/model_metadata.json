@@ -1,0 +1,6 @@
+{
+  "user_id": "demo-user",
+  "limit": 5,
+  "catalog_size": 8,
+  "recommendation_count": 5
+}

@@ -1,0 +1,2 @@
+catalog_load_error: missing columns: ['artist', 'genres']
+recommendation_error: missing columns: ['artist', 'genres']
